@@ -1,1 +1,24 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- … -->
+  </head>
+  <body>
+    <input type="email" id="email" placeholder="Email Address"/>
+    <button id="pay">Pay with Bitcoin</button>
+    <b><span id="bitcoinpay"></div><b>
+    <script src="https://blockonomics.co/js/pay_widget.js"></script> 
+    <script>
+    function pay() {
+        var email = document.getElementById('email').value;
+        Blockonomics.widget({
+            msg_area: 'bitcoinpay',
+            uid: '9060e44392e54b7e',
+            email: email
+        });
+    }
+
+    document.getElementById('pay').onclick = function() { pay() };
+    </script>
+  </body>
+</html>
